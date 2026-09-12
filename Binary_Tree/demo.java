@@ -23,6 +23,9 @@ public class demo {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
 
+        root.right.left = new TreeNode(4);
+        root.right.right = new TreeNode(5);
+
         demo obj = new demo();
 
         int result = obj.diameterOfBinaryTree(root);

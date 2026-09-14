@@ -39,10 +39,10 @@ public class demo {
 
         int Dia = height(root.left) + height(root.right);
 
-        int left = diameterOfBinaryTree(root.left);
-        int right = diameterOfBinaryTree(root.right);
+        int l = diameterOfBinaryTree(root.left);
+        int r = diameterOfBinaryTree(root.right);
 
-        return Math.max(Dia, Math.max(left, right));
+        return Math.max(Dia, Math.max(l, r));
     }
 
     public int height(TreeNode root) {

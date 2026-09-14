@@ -37,12 +37,12 @@ public class demo {
         if (root == null)
             return 0;
 
-        int Dia = height(root.left) + height(root.right);
+        int D = height(root.left) + height(root.right);
 
         int l = diameterOfBinaryTree(root.left);
         int r = diameterOfBinaryTree(root.right);
 
-        return Math.max(Dia, Math.max(l, r));
+        return Math.max(D, Math.max(l, r));
     }
 
     public int height(TreeNode root) {

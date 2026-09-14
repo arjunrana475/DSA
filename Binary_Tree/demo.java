@@ -30,7 +30,7 @@ public class demo {
 
         int result = obj.diameterOfBinaryTree(root);
 
-        System.out.println("Diameter of Binary Tree : " + result);
+        System.out.println("Diameter of Binary Tree = " + result);
     }
 
     public int diameterOfBinaryTree(TreeNode root) {

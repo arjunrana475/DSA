@@ -11,6 +11,7 @@ public class sen {
             this.val = val;
         }
     }
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
 
@@ -25,8 +26,27 @@ public class sen {
 
         demo obj = new demo();
 
-        int result = 0;
+        int result = obj.diameterOfBinaryTree(root);
 
         System.out.println("Diameter of Binary Tree = " + result);
+    }
+    
+    public int diameterOfBinaryTree(TreeNode root) {
+        if (root == null)
+            return 0;
+
+        int D = height(root.left) + height(root.right);
+
+        int l = diameterOfBinaryTree(root.left);
+        int r = diameterOfBinaryTree(root.right);
+
+        return Math.max(D, Math.max(l, r));
+    }
+
+    public int height(TreeNode root) {
+        if (root == null)
+            return 0;
+
+        return 1 + Math.max(height(root.left), height(root.right));
     }
 }

@@ -18,8 +18,8 @@ public class sen {
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
 
-        root.left.left = new TreeNode(7);
-        root.left.right = new TreeNode(9);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(0);
 
         root.right.left = new TreeNode(4);
         root.right.right = new TreeNode(5);

@@ -16,7 +16,6 @@ public class Kahns_Algo {
             graph.get(u).add(v);
         }
         topologicalSort(V, graph, ans);
-        Collections.reverse(ans);
         System.out.println(ans);
     }
     
@@ -36,12 +35,11 @@ public class Kahns_Algo {
             int front = q.remove();
             ans.add(front);
             for (int ele : graph.get(front)) {
-                in[ele] -= 1;
-            }
-            for (int ele : graph.get(front)) {
+                in[ele]--;
                 if (in[ele] == 0)
                     q.add(ele);
             }
+            
         }
            
        
